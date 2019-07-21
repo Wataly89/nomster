@@ -1,9 +1,12 @@
 class PlacesController < ApplicationController
 
 	def index
-		@places = Place.paginate(1:page => params[:page])
+		@places = Place.order("name").page(params[:page]).per_page(3)
 	end
 
+	def new
+		@place = Place.new
+	end
 
 
 end
