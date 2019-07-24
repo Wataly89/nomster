@@ -23,6 +23,8 @@ class PlacesController < ApplicationController
 
   def show
   	@place = Place.find(params[:id])
+  	@api_key = Figaro.load["GEOCODER_API_KEY"]
+  	p @api_key 
   end
 
 
