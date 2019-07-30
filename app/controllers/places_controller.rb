@@ -26,6 +26,7 @@ class PlacesController < ApplicationController
   	@api_key = Figaro.load["GEOCODER_API_KEY"]
   	p @api_key 
   	@comment = Comment.new
+    @photo = Photo.new
   end
 
 
