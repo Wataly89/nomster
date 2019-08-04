@@ -41,7 +41,7 @@
 	</div>
 </div>
 
-<!-- Modal -->
+<!-- Comments Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -72,7 +72,6 @@
 </button>
 </div>
 
-<!-- Comments secion -->
 <div class="clear"></div>
 
 <div class="row">
@@ -90,12 +89,23 @@
 <% end %>
 </div>
 
-<!-- Photos section -->
-<% @place.photos.each do |photo| %>
-<div>
-	<%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
-	  <%= f.input :caption %>
-	  <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
+<!-- Photos -->
+<div class="col-10 offset-1">
+<h1 class="float-left">Photos</h1>
+<br><br/>
+<div class="row">
+	<% @place.photos.each do |photo| %>
+	
+		<%= image_tag photo.picture.url %>
 	<% end %>
+	
+</div>
+<%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+<div class="modal-body">
+  <%= f.input :caption %>
+  <%= f.file_field :picture %>
+  <%= f.submit "Add a Caption", class: "float-right btn btn-primary" %>
 </div>
 <% end %>
+
+
