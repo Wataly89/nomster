@@ -44,11 +44,11 @@
 	<div class="col-10 offset-1 button-wrapper">
 		<!-- Photo Button trigger modal -->
 		<button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#photoModal">
-			Add a photo
+			Add a Photo
 		</button>
 		<!-- Comment Button trigger modal -->
 		<button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myModal">
-			Add a comment
+			Add a Comment
 		</button>
 	</div>
 
@@ -62,7 +62,7 @@
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">×</span>
 					</button>
-					<h4 class="modal-title" id="myModalLabel">Add a comment</h4>
+					<h4 class="modal-title" id="myModalLabel">Add a Comment</h4>
 				</div>
 				<%= simple_form_for @comment, url: place_comments_path(@place) do |f| %>
 				<div class="modal-body">
@@ -88,7 +88,7 @@
 					<button type="button" class="close, float-right" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">×</span>
 					</button>
-					<h4 class="modal-title" id="myModalLabel">Add a photo</h4>
+					<h4 class="modal-title" id="myModalLabel">Add a Photo</h4>
 				</div>
 				<%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
 				<div class="modal-body">
