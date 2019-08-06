@@ -124,3 +124,22 @@ blockquote:before {
 blockquote p {
   display: inline;
 }
+
+.upld-photo {
+  .cmt-img {
+    max-width: 50%;
+  }
+}
+
+.photo-caption {
+  background: #FFFFFF;
+  border-left: 10px dotted #0014FF;
+  margin: 10px 15px 10px 0px;
+ 
+}
+
+.indexphoto {
+  .idx-photo {
+    max-width: 30%;
+  }
+}
